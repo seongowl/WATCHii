@@ -1,0 +1,65 @@
+.review-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #3e7cbf; /* 타이틀 색상 추가 */
+}
+
+.review-form .rating {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* 별점 입력 중앙 정렬 */
+}
+
+.review-form .rating span {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0 5px; /* 별 사이 간격 추가 */
+    color: gray; /* 기본 별 색상 */
+}
+
+.review-form .rating span.filled {
+    color: gold; /* 채워진 별 색상 */
+}
+
+.review-form textarea {
+    width: 80%; /* 너비 100%에서 80%로 조정 */
+    height: 100px; /* 높이 설정 */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em; /* 글꼴 크기 추가 */
+}
+
+.review-form button {
+    padding: 10px 20px;
+    background-color: #3e7cbf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* 글꼴 크기 추가 */
+    transition: background-color 0.3s ease; /* 배경색 전환 애니메이션 추가 */
+}
+
+.review-form button:hover {
+    background-color: #355a8a; /* 호버시 배경색 변경 */
+}
+
+.review-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.review-form .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9em; /* 글꼴 크기 추가 */
+}

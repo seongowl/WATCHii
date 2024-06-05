@@ -1,0 +1,64 @@
+/* MovieDetailPage.css */
+
+.movie-detail {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: #fff;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .movie-detail h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+    
+  .movie-detail img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    display: block; /* Ensure the image is a block element for margin auto to work */
+  }
+  
+  .movie-detail p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Center the slider */
+  .slick-slider {
+    margin: 0 auto;
+    width: 80%; /* Adjust width as needed */
+  }
+  
+  /* Adjust margin for the images in the slider */
+  .slick-slide img {
+    margin: 0 auto; /* Center the images in the slider */
+  }
+  
+  /* Style the navigation arrows */
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .slick-prev {
+    left: 10px; /* Adjust the position of the previous arrow */
+  }
+  
+  .slick-next {
+    right: 10px; /* Adjust the position of the next arrow */
+  }
+  

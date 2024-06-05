@@ -1,0 +1,80 @@
+.mypage-container {
+    padding: 20px;
+    background-color: #282c34;
+    color: aliceblue;
+    border-radius: 15px;
+    width: 35%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .mypage-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f4e04d;
+    text-align: center;
+  }
+  
+  .mypage-section {
+    margin-bottom: 20px;
+  }
+  
+  .mypage-section h2 {
+    color: #f4e04d;
+    margin-bottom: 10px;
+  }
+  
+  .mypage-section p {
+    margin: 5px 0;
+  }
+  
+  .mypage-section input,
+  .mypage-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .mypage-section input[type="text"],
+  .mypage-section textarea {
+    background-color: #3a3f47;
+    color: aliceblue;
+  }
+  
+  .mypage-section textarea {
+    resize: none;
+  }
+  
+  .mypage-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .mypage-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f4e04d;
+    color: #282c34;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .mypage-buttons button:hover {
+    background-color: #e4d04d;
+  }
+  
+  .mypage-buttons button.cancel {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .mypage-buttons button.cancel:hover {
+    background-color: #c9302c;
+  }
+  
