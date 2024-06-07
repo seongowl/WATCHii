@@ -44,7 +44,7 @@ const Header = () => {
   };
 
   const handleSignup = (username, password) => {
-    axios.post('http://localhost:5000/signup', { username, password })
+    axios.post(process.env.REACT_APP_API_PROFILE_URL+'/signup', { username, password })
       .then((response) => {
         // 회원가입 성공 시
         toast.success("회원가입이 성공적으로 완료되었습니다.");
@@ -58,7 +58,7 @@ const Header = () => {
   };
 
   const handleLogin = (username, password) => {
-    axios.post('http://localhost:5000/login', { username, password })
+    axios.post(process.env.REACT_APP_API_PROFILE_URL+'/login', { username, password })
       .then((response) => {
         // 로그인 성공 시
         toast.success("로그인이 성공적으로 완료되었습니다.");

@@ -41,7 +41,7 @@ const MovieDetailPage = () => {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/movies/${id}`);
+        const response = await axios.get(process.env.REACT_APP_API_PROFILE_URL+`/movies/${id}`);
         setMovie(response.data);
       } catch (error) {
         console.error('영화 정보를 불러오는 데 실패했습니다:', error);
@@ -51,7 +51,7 @@ const MovieDetailPage = () => {
 
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/movies/${id}/reviews`);
+        const response = await axios.get(process.env.REACT_APP_API_PROFILE_URL+`/movies/${id}/reviews`);
         setReviews(response.data);
         setHasReviews(response.data.length > 0); // 리뷰의 존재 여부 설정
       } catch (error) {

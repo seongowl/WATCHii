@@ -10,7 +10,7 @@ const SearchResultPage = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/movies/search?query=${encodeURIComponent(query)}`);
+        const response = await axios.get(process.env.REACT_APP_API_PROFILE_URL+`/movies/search?query=${encodeURIComponent(query)}`);
         setResults(response.data.posts);
       } catch (error) {
         console.error('Error fetching search results:', error);

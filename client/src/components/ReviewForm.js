@@ -31,7 +31,7 @@ const ReviewForm = ({ movieId }) => {
           'Authorization': `Bearer ${token}`
         }
       };
-      await axios.post(`http://localhost:5000/movies/${movieId}/reviews`, { review, rating }, config);
+      await axios.post(process.env.REACT_APP_API_PROFILE_URL+`/movies/${movieId}/reviews`, { review, rating }, config);
       setReview('');
       setRating(0);
       setSubmittingReview(false);

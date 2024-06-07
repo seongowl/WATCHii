@@ -33,7 +33,7 @@ const MyPage = () => {
       setUserInfo(JSON.parse(storedUserInfo));
       setLoading(false);
     } else {
-      axios.get('http://localhost:5000/mypage', {
+      axios.get(process.env.REACT_APP_API_PROFILE_URL+'/mypage', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -81,7 +81,7 @@ const MyPage = () => {
       const formData = new FormData();
       formData.append('image', imageFile);
   
-      axios.post('http://localhost:5000/upload', formData, {
+      axios.post(process.env.REACT_APP_API_PROFILE_URL+'/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -105,7 +105,7 @@ const MyPage = () => {
   };
     
   const updateUserInfo = (token, updatedInfo = userInfo) => {
-    axios.put('http://localhost:5000/mypage', { userinfo: updatedInfo }, {
+    axios.put(process.env.REACT_APP_API_PROFILE_URL+'/mypage', { userinfo: updatedInfo }, {
       headers: {
         Authorization: `Bearer ${token}`
       }

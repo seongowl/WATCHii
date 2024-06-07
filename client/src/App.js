@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/movies')
+      .get(process.env.REACT_APP_API_PROFILE_URL+'/movies')
       .then((response) => {
         setMovies(response.data);
         const allReviews = response.data.flatMap((movie) => 
@@ -58,7 +58,7 @@ function App() {
   }, []);
 
   const handleLogin = (username, password) => {
-    axios.post('http://localhost:5000/users/login', { username, password })
+    axios.post(process.env.REACT_APP_API_PROFILE_URL+'/users/login', { username, password })
       .then(response => {
         setUser(response.data.user);
         localStorage.setItem('token', response.data.token);
